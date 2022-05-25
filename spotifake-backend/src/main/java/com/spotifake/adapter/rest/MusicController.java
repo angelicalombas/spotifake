@@ -28,7 +28,7 @@ public class MusicController {
     private MusicasService musicasService;
 
     @GetMapping
-    public ResponseEntity<Map<String, List<MusicasResponse>>> encontrarMusicas(@RequestParam("filtro") String nome) {
+    public ResponseEntity<List<MusicasResponse>> encontrarMusicas(@RequestParam("filtro") String nome) {
 
         try {
 
@@ -46,7 +46,7 @@ public class MusicController {
                 response.clear();
                 response.put("musicas", musicasResponseList);
 
-                return ResponseEntity.status(HttpStatus.OK).body(response);
+                return ResponseEntity.status(HttpStatus.OK).body(musicasResponseList);
             }
         } catch (Exception e) {
             throw new RuntimeException("Erro ao realizar a busca");
