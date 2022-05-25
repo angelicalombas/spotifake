@@ -1,0 +1,21 @@
+.container {
+    // margin-top: 10px;
+   // display: list-item;
+    display: flex;
+    align-items: center;
+   // justify-content: center;
+
+   &--row{
+       margin-left: 10px;
+   }
+
+    &--musica{
+        
+    }
+
+    &--artista {
+        margin-left: 10px;
+        font-size: 12px;
+        font-style: oblique;
+    }
+}
